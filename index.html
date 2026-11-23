@@ -9,14 +9,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="desktop" aria-label="Personal website window">
+  <main class="desktop" aria-label="Personal website">
     <div class="titlebar">
       <span class="window-star" aria-hidden="true">★</span>
-      <span class="window-controls" aria-hidden="true">
-        <span class="control minimize">_</span>
-        <span class="control maximize">□</span>
-        <span class="control close">×</span>
-      </span>
+      <span class="window-controls" aria-hidden="true"><span class="control minimize">_</span><span class="control maximize">□</span><span class="control close">×</span></span>
     </div>
     <div class="window-content">
       <header class="site-header">
@@ -27,31 +23,17 @@
           <p class="subtitle">Personal website · collecting thoughts, links, and little projects</p>
         </div>
       </header>
-
-      <nav class="nav" aria-label="Main navigation">
-        <a href="index.html" aria-current="page">home</a>
-        <a href="blog/index.html">blog</a>
-        <a href="intro.txt">intro.txt</a>
-      </nav>
-
+      <nav class="nav" aria-label="Main navigation"><a href="index.html" aria-current="page">home</a><a href="blog/index.html">blog</a></nav>
       <section class="intro" aria-labelledby="about-title">
         <h2 id="about-title">A little about me</h2>
         <p>I’m a curious person who likes making things, learning, and sharing what I find along the way. This is my small, simple place on the web.</p>
-        <p class="hint">Edit <a href="intro.txt">intro.txt</a> to write your own introduction. Replace the sample avatar with a photo whenever you’re ready.</p>
       </section>
-
       <section class="latest" aria-labelledby="latest-title">
         <h2 id="latest-title">From the blog</h2>
-        <ul class="post-list">
-          <li><time datetime="2026-11-23">Nov 23, 2026</time><a href="blog/hello-world.html">Hello, internet!</a><span class="post-note">— the first post</span></li>
-        </ul>
+        <ul class="post-list"><li><time datetime="2026-11-23">Nov 23, 2026</time><a href="blog/hello-world.html">Hello, internet!</a><span class="post-note">— the first post</span></li></ul>
         <a class="all-posts" href="blog/index.html">Read all posts →</a>
       </section>
-
-      <footer class="site-footer">
-        <span>Made with care and a little nostalgia.</span>
-        <span>© <span id="year">2026</span> Your Name</span>
-      </footer>
+      <footer class="site-footer"><span>Made with care and a little nostalgia.</span><span>© <span id="year">2026</span> Your Name</span></footer>
     </div>
   </main>
 </body>
