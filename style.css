@@ -47,12 +47,7 @@ a:hover { color: #c00; }
   text-shadow: 0 1px 2px #003080;
 }
 
-.window-star {
-  font-size: 25px;
-  line-height: 1;
-  text-shadow: 1px 2px 1px #003080;
-}
-
+.window-star { font-size: 25px; line-height: 1; text-shadow: 1px 2px 1px #003080; }
 .window-controls { display: flex; gap: 5px; }
 
 .control {
@@ -70,10 +65,7 @@ a:hover { color: #c00; }
   background: linear-gradient(#73b5ff, #1264e9 60%, #0344b4);
 }
 
-.control.close {
-  font-size: 32px;
-  background: linear-gradient(#ffab83, #e34b31 60%, #bd241a);
-}
+.control.close { font-size: 32px; background: linear-gradient(#ffab83, #e34b31 60%, #bd241a); }
 
 .window-content {
   width: min(900px, calc(100% - 40px));
@@ -98,29 +90,18 @@ a:hover { color: #c00; }
 .post-image {
   display: block;
   width: 100%;
-  max-height: 520px;
   margin: 18px 0;
-  object-fit: cover;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
   border: 3px solid white;
   box-shadow: 0 0 0 1px #a5a18e;
 }
 
-.eyebrow {
-  margin: 0 0 5px;
-  color: #696653;
-  font-size: 11px;
-  font-weight: bold;
-  letter-spacing: .12em;
-}
-
+.movie-title { color: #d66b12; font-weight: bold; }
+.eyebrow { margin: 0 0 5px; color: #696653; font-size: 11px; font-weight: bold; letter-spacing: .12em; }
 h1, h2, p { margin-top: 0; }
-
-h1 {
-  margin-bottom: 3px;
-  font-size: clamp(28px, 5vw, 40px);
-  line-height: 1.15;
-}
-
+h1 { margin-bottom: 3px; font-size: clamp(28px, 5vw, 40px); line-height: 1.15; }
 .subtitle { margin-bottom: 0; color: #5b584b; }
 
 .nav {
@@ -133,12 +114,10 @@ h1 {
 }
 
 .nav a { font-weight: bold; }
-
 .intro, .latest { max-width: 700px; }
 h2 { margin-bottom: 10px; font-size: 21px; }
 .intro p { margin-bottom: 12px; }
 .latest { margin-top: 29px; }
-
 .post-list { margin: 0 0 10px; padding-left: 20px; }
 .post-list li { padding: 3px 0; }
 .post-list time { margin-right: 12px; color: #686452; font-size: 13px; }
@@ -171,23 +150,8 @@ h2 { margin-bottom: 10px; font-size: 21px; }
 }
 
 .cookie-consent p { margin: 6px 0 12px; }
-.cookie-consent button,
-.cookie-settings {
-  margin-right: 6px;
-  padding: 6px 10px;
-  border: 1px solid #073fb1;
-  border-radius: 3px;
-  background: #0756e9;
-  color: white;
-  cursor: pointer;
-}
-
-.cookie-settings {
-  margin: 0;
-  font: inherit;
-  font-size: 12px;
-}
-
+.cookie-consent button, .cookie-settings { margin-right: 6px; padding: 6px 10px; border: 1px solid #073fb1; border-radius: 3px; background: #0756e9; color: white; cursor: pointer; }
+.cookie-settings { margin: 0; font: inherit; font-size: 12px; }
 .cookie-counter-status { margin: 8px 0 0; }
 
 @media (max-width: 540px) {
