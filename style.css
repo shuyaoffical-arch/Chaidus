@@ -1,1 +1,205 @@
-! !
+* { box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+  --blue: #0756e9;
+  --ink: #252525;
+  --paper: #eeecda;
+  --link: #0645ad;
+}
+
+html, body { min-height: 100%; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover { color: #c00; }
+
+.desktop {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.titlebar {
+  width: 100%;
+  min-height: 56px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(180deg, #2678fa 0%, #0756e9 52%, #0046ce 100%);
+  border-bottom: 3px solid #82a8f3;
+  text-shadow: 0 1px 2px #003080;
+}
+
+.window-star {
+  font-size: 25px;
+  line-height: 1;
+  text-shadow: 1px 2px 1px #003080;
+}
+
+.window-controls { display: flex; gap: 5px; }
+
+.control {
+  width: 43px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  border: 2px solid #d5e5ff;
+  border-radius: 9px 9px 5px 5px;
+  box-shadow: 0 0 0 1px #1749a3, inset 0 1px 2px #fff9;
+  background: linear-gradient(#73b5ff, #1264e9 60%, #0344b4);
+}
+
+.control.close {
+  font-size: 32px;
+  background: linear-gradient(#ffab83, #e34b31 60%, #bd241a);
+}
+
+.window-content {
+  width: min(900px, calc(100% - 40px));
+  min-height: calc(100vh - 59px);
+  margin: 0 auto;
+  padding: clamp(22px, 5vw, 52px) 20px;
+  background: var(--paper);
+}
+
+.site-header { display: flex; align-items: center; gap: 22px; }
+
+.portrait {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 auto;
+  object-fit: cover;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #a5a18e;
+}
+
+.post-image {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  margin: 18px 0;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px #a5a18e;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #696653;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: .12em;
+}
+
+h1, h2, p { margin-top: 0; }
+
+h1 {
+  margin-bottom: 3px;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.15;
+}
+
+.subtitle { margin-bottom: 0; color: #5b584b; }
+
+.nav {
+  display: flex;
+  gap: 22px;
+  margin: 30px 0 32px;
+  padding: 11px 0;
+  border-top: 1px solid #c9c5b2;
+  border-bottom: 1px solid #c9c5b2;
+}
+
+.nav a { font-weight: bold; }
+
+.intro, .latest { max-width: 700px; }
+h2 { margin-bottom: 10px; font-size: 21px; }
+.intro p { margin-bottom: 12px; }
+.latest { margin-top: 29px; }
+
+.post-list { margin: 0 0 10px; padding-left: 20px; }
+.post-list li { padding: 3px 0; }
+.post-list time { margin-right: 12px; color: #686452; font-size: 13px; }
+.post-note { color: #625f52; }
+.all-posts { display: inline-block; margin-top: 3px; }
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 38px;
+  padding-top: 13px;
+  color: #625f52;
+  font-size: 13px;
+  border-top: 1px solid #c9c5b2;
+}
+
+.cookie-consent {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  width: min(380px, calc(100% - 36px));
+  padding: 16px;
+  border: 2px solid #073fb1;
+  background: #fff;
+  box-shadow: 0 8px 24px #0003;
+}
+
+.cookie-consent p { margin: 6px 0 12px; }
+.cookie-consent button,
+.cookie-settings {
+  margin-right: 6px;
+  padding: 6px 10px;
+  border: 1px solid #073fb1;
+  border-radius: 3px;
+  background: #0756e9;
+  color: white;
+  cursor: pointer;
+}
+
+.cookie-settings {
+  margin: 0;
+  font: inherit;
+  font-size: 12px;
+}
+
+.cookie-counter-status { margin: 8px 0 0; }
+
+@media (max-width: 540px) {
+  .titlebar { min-height: 47px; }
+  .control { width: 35px; height: 32px; }
+  .window-content { width: calc(100% - 36px); min-height: calc(100vh - 50px); padding: 23px 0; }
+  .site-header { align-items: flex-start; gap: 14px; }
+  .portrait { width: 64px; height: 64px; }
+  .eyebrow { font-size: 9px; }
+  .subtitle { font-size: 14px; }
+  .nav { gap: 17px; margin: 22px 0 25px; }
+  .post-list time { display: block; margin: 0; }
+  .post-note { display: block; font-size: 13px; }
+  .site-footer { flex-direction: column; align-items: flex-start; }
+}
