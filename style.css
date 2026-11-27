@@ -6,6 +6,7 @@
   --ink: #252525;
   --paper: #eeecda;
   --link: #0645ad;
+  --orange: #c65a12;
 }
 
 html, body { min-height: 100%; }
@@ -80,13 +81,40 @@ h2 { margin-bottom: 10px; font-size: 21px; }
 .post-list time { margin-right: 12px; color: #686452; font-size: 13px; }
 .post-note { color: #625f52; }
 .all-posts { display: inline-block; margin-top: 3px; }
+.post-article { max-width: 720px; }
+.post-article > p { margin: 0 0 16px; }
+.post-photo { margin: 22px 0; }
+.post-photo img { display: block; width: 100%; height: auto; }
+.post-photo figcaption { margin-top: 7px; color: #625f52; font-size: 14px; font-style: italic; }
+.photo-placeholder {
+  min-height: 220px; display: grid; place-items: center; padding: 24px;
+  color: #625f52; text-align: center; background: #e2dfcd; border: 1px dashed #aaa58e;
+}
+.movie-title { color: var(--orange); font-weight: bold; }
 
 .site-footer {
-  display: flex; justify-content: space-between; gap: 12px;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
   margin-top: 38px; padding-top: 13px;
   color: #625f52; font-size: 13px;
   border-top: 1px solid #c9c5b2;
 }
+.cookie-settings {
+  padding: 0; color: var(--link); font: inherit; text-decoration: underline;
+  text-underline-offset: 3px; border: 0; background: transparent; cursor: pointer;
+}
+.cookie-counter-status { flex-basis: 100%; margin: 0; font-size: 12px; }
+.cookie-consent {
+  position: fixed; z-index: 10; inset: auto 16px 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  max-width: 900px; margin: 0 auto; padding: 18px 20px;
+  color: var(--ink); background: #fffdf2; border: 1px solid #aaa58e;
+  border-radius: 8px; box-shadow: 0 4px 20px #0003;
+}
+.cookie-consent p { margin: 4px 0 0; font-size: 14px; }
+.cookie-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+.cookie-actions button { padding: 8px 12px; border: 1px solid #0756e9; border-radius: 4px; background: white; cursor: pointer; }
+.cookie-actions [data-choice="accept"] { color: white; background: #0756e9; }
+.cookie-actions button:focus-visible, .cookie-settings:focus-visible { outline: 3px solid #ff9a3c; outline-offset: 2px; }
 
 @media (max-width: 540px) {
   .titlebar { min-height: 47px; }
@@ -99,5 +127,7 @@ h2 { margin-bottom: 10px; font-size: 21px; }
   .nav { gap: 17px; margin: 22px 0 25px; }
   .post-list time { display: block; margin: 0; }
   .post-note { display: block; font-size: 13px; }
-  .site-footer { flex-direction: column; }
+  .site-footer { flex-direction: column; align-items: flex-start; }
+  .cookie-consent { inset: auto 10px 10px; align-items: stretch; flex-direction: column; gap: 12px; padding: 15px; }
+  .cookie-actions { flex-wrap: wrap; }
 }
